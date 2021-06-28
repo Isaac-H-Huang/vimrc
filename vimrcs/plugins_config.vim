@@ -27,9 +27,32 @@ map <leader>o :BufExplorer<cr>
 """"""""""""""""""""""""""""""
 " => MRU plugin
 """"""""""""""""""""""""""""""
-let MRU_Max_Entries = 400
+let MRU_Max_Entries = 100
+let MRU_Max_Menu_Entries = 10
+let MRU_Use_Current_Window = 1
 map <leader>f :MRU<CR>
+map <leader>r :reg<CR>
+map <leader>p :echo expand('%:p')
+noremap <leader>1p "1p
+noremap <leader>2p "2p
+noremap <leader>3p "3p
+noremap <leader>4p "4p
+noremap <leader>5p "5p
+noremap <leader>6p "6p
+noremap <leader>7p "7p
+noremap <leader>dp "1p
+noremap <leader>yp "9p
 
+noremap <leader>1yy "1yy
+noremap <leader>2yy "2yy
+noremap <leader>3yy "3yy
+noremap <leader>4yy "4yy
+noremap <leader>5yy "5yy
+noremap <leader>6yy "6yy
+noremap <leader>7yy "7yy
+noremap <leader>8yy "8yy
+noremap <leader>dd "1dd
+noremap <leader>yy "9yy
 
 """"""""""""""""""""""""""""""
 " => YankStack
@@ -37,7 +60,7 @@ map <leader>f :MRU<CR>
 let g:yankstack_yank_keys = ['y', 'd']
 
 nmap <c-p> <Plug>yankstack_substitute_older_paste
-nmap <c-n> <Plug>yankstack_substitute_newer_paste
+"nmap <c-n> <Plug>yankstack_substitute_newer_paste
 
 
 """"""""""""""""""""""""""""""
@@ -78,7 +101,7 @@ set grepprg=/bin/grep\ -nH
 " => Nerd Tree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:NERDTreeWinPos = "right"
-let NERDTreeShowHidden=0
+let NERDTreeShowHidden=1
 let NERDTreeIgnore = ['\.pyc$', '__pycache__']
 let g:NERDTreeWinSize=35
 map <leader>nn :NERDTreeToggle<cr>
